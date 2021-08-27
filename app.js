@@ -85,6 +85,7 @@ app.get('/submit_caregiver', (req, res) => {
 })
 
 app.post('/create_visit', (req, res) => {
+	console.log('Dzoała')
 	var accountID = parseInt(req.body.accountID);
 	var date = req.body.date;
 	var hour = req.body.hour;
