@@ -106,7 +106,7 @@ app.post('/create_visit', (req, res) => {
 	console.log(currency)
 
 	/// INSERT INTO service_address (Senior, address) VALUES (accountID, localization);
-	pool.query('INSERT INTO service_address (Senior, Address) VALUES (9,"'+localization+'")', (error, results)=>{
+	pool.query(`INSERT INTO service_address (Senior, Address) VALUES (9, '${localization}')`, (error, results)=>{
 		if(error){
 			console.log(error)
 			res.status(200).json({'SQL error': 'INSERT INTO service_address'})
@@ -138,7 +138,5 @@ app.post('/create_visit', (req, res) => {
 		}
 	})
 })
-
-
 
 app.listen(port, () => { console.log('App is running')})
