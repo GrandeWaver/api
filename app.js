@@ -140,4 +140,5 @@ app.post('/create_visit', (req, res) => {
 	})
 })
 
+
 app.listen(port, () => { console.log('App is running')})
